@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunisia — Part 2 Practical Travel Guide</title>
+<style>
+  :root{
+    --ink:#17201f;
+    --muted:#68716f;
+    --paper:#fbf7ef;
+    --card:#fffdf8;
+    --accent:#d86f52;
+    --accent2:#e9c56d;
+    --line:#e6ddd0;
+    --green:#55746a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:760px;margin:auto;padding:18px}
+  .hero{
+    min-height:360px;
+    border-radius:30px;
+    padding:34px 28px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background:
+      radial-gradient(circle at 85% 18%, #f4d88f 0 12%, transparent 13%),
+      linear-gradient(145deg,#dce9df,#f6d7bb 52%,#e99b78);
+    overflow:hidden;
+    position:relative;
+  }
+  .hero:after{
+    content:"🇹🇳";
+    position:absolute;
+    top:24px;right:25px;
+    font-size:58px;
+    opacity:.9;
+  }
+  .eyebrow{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--green);
+    margin-bottom:8px;
+  }
+  h1{
+    font-family:Georgia,serif;
+    font-size:46px;
+    line-height:1.02;
+    margin:0 0 12px;
+    max-width:600px;
+  }
+  .hero p{max-width:610px;font-size:16px;margin:0;color:#33403d}
+  section{margin:22px 0}
+  .section-head{
+    padding:5px 4px 10px;
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:12px;
+  }
+  h2{
+    font-family:Georgia,serif;
+    font-size:30px;
+    line-height:1.1;
+    margin:0;
+  }
+  .num{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    color:var(--accent);
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 8px 25px rgba(70,50,30,.05);
+  }
+  .card p{margin:0 0 12px}
+  .card p:last-child{margin-bottom:0}
+  .highlight{
+    background:#f3e4c4;
+    border:none;
+  }
+  .tip{
+    background:#e5eee9;
+    border:none;
+  }
+  .price{
+    font-family:Georgia,serif;
+    font-size:25px;
+    font-weight:700;
+  }
+  .small{font-size:13px;color:var(--muted)}
+  .bullets{margin:10px 0 0;padding-left:20px}
+  .bullets li{margin:7px 0}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .chip{
+    background:#f0e7da;
+    border-radius:999px;
+    padding:7px 11px;
+    font-size:13px;
+    font-weight:700;
+  }
+  .costs{display:grid;gap:10px;margin-top:14px}
+  .cost{
+    display:flex;justify-content:space-between;gap:18px;
+    padding:13px 0;border-bottom:1px solid var(--line)
+  }
+  .cost:last-child{border-bottom:0}
+  .cost strong{white-space:nowrap}
+  .total{
+    margin-top:16px;
+    padding:17px;
+    border-radius:16px;
+    background:#17201f;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-weight:800;
+  }
+  .photo-list{display:grid;gap:0}
+  .photo{
+    display:flex;gap:13px;align-items:flex-start;
+    padding:13px 0;border-bottom:1px solid var(--line)
+  }
+  .photo:last-child{border-bottom:0}
+  .photo .emoji{font-size:20px;width:28px}
+  .photo strong{display:block}
+  .visa-docs{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+    margin-top:14px;
+  }
+  .doc{
+    background:#f6efe5;
+    border-radius:13px;
+    padding:10px 12px;
+    font-size:13px;
+    font-weight:700;
+  }
+  .more-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .more{
+    border-radius:18px;
+    padding:18px;
+    background:#fff;
+    border:1px solid var(--line);
+  }
+  .more h3{font-family:Georgia,serif;font-size:22px;margin:0 0 7px}
+  .more p{font-size:14px;margin:0;color:#59625f}
+  .cta{
+    margin:28px 0 8px;
+    border-radius:25px;
+    padding:30px 24px;
+    text-align:center;
+    background:linear-gradient(135deg,#e7c56f,#d87858);
+  }
+  .cta h2{margin-bottom:10px}
+  .insta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:17px;
+    padding:12px 18px;
+    border-radius:999px;
+    background:#fff;
+    color:#17201f;
+    text-decoration:none;
+    font-weight:800;
+  }
+  .insta-icon{
+    width:21px;height:21px;border:2px solid currentColor;
+    border-radius:6px;display:inline-block;position:relative
+  }
+  .insta-icon:before{
+    content:"";position:absolute;width:7px;height:7px;
+    border:2px solid currentColor;border-radius:50%;
+    left:5px;top:5px
+  }
+  .insta-icon:after{
+    content:"";position:absolute;width:3px;height:3px;
+    background:currentColor;border-radius:50%;right:3px;top:3px
+  }
+  footer{text-align:center;color:var(--muted);font-size:12px;padding:18px 0 30px}
+  @media(max-width:560px){
+    .wrap{padding:12px}
+    .hero{min-height:330px;padding:28px 22px;border-radius:25px}
+    h1{font-size:38px}
+    h2{font-size:27px}
+    .more-grid,.visa-docs{grid-template-columns:1fr}
+    .card{padding:19px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Part 2 • The Practical Guide</div>
+    <h1>Tunisia,<br>Beyond 10 Days</h1>
+    <p>A few things we wish we knew before going — where to stay, what to eat, how to get around, visa, costs, shopping & the best photo spots.</p>
+  </header>
+
+  <section>
+    <div class="section-head"><h2>Where We Stayed</h2><span class="num">01</span></div>
+    <div class="card">
+      <p>We mostly chose <strong>Airbnbs instead of hotels</strong> — they were more affordable and often more convenient for a road trip.</p>
+      <p class="price">₹3,000–₹4,000 / night</p>
+      <p class="small">Our average for a decent stay. For a self-drive trip, we’d prioritise parking, location and easy check-in over fancy hotel facilities.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Food — For Vegetarians</h2><span class="num">02</span></div>
+    <div class="card highlight">
+      <p>Tunisians are incredibly hospitable — sometimes they may add toppings you <em>didn't</em> ask for while trying to be helpful 😅 We ended up <strong>vetting a ham pizza</strong> after clearly saying no chicken. So always double-check your order!</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Getting Around</h2><span class="num">03</span></div>
+    <div class="card">
+      <p><strong>We preferred self-drive.</strong> It gave us the freedom to cover multiple places without depending on public transport.</p>
+      <ul class="bullets">
+        <li>🚘 <strong>Rental car:</strong> Best for a road trip</li>
+        <li>🚕 <strong>Taxis:</strong> Easy and affordable for shorter distances</li>
+        <li>🚌 <strong>Buses / shared taxis:</strong> Cheap options for intercity travel</li>
+      </ul>
+      <div class="card tip" style="margin-top:16px;padding:16px">
+        <strong>Rental tip:</strong> Book early during peak season and check the <strong>car's year and condition</strong> before accepting it. We’d pick a newer, well-maintained car over saving a little on the rental.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Visa for Indians</h2><span class="num">04</span></div>
+    <div class="card">
+      <p>We paid <strong>₹7,000 per person</strong> when we travelled.</p>
+      <p>We submitted our documents to the <strong>nearest Tunisian Embassy / Consulate</strong> and received our visa within <strong>2 weeks at most</strong>.</p>
+      <p class="small"><strong>Important:</strong> Online visa information can be inaccurate or outdated. We recommend calling the embassy directly for the latest requirements before applying.</p>
+      <div class="visa-docs">
+        <div class="doc">📄 Cover letter</div>
+        <div class="doc">✈️ Flight + accommodation bookings</div>
+        <div class="doc">📝 Visa application form</div>
+        <div class="doc">📸 Photograph</div>
+        <div class="doc">🏦 3-month bank statement</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Approx. Cost Breakdown</h2><span class="num">05</span></div>
+    <div class="card">
+      <div class="costs">
+        <div class="cost"><span>✈️ Return flights</span><strong>~₹40K pp</strong></div>
+        <div class="cost"><span>🇹🇳 Visa</span><strong>~₹7K pp</strong></div>
+        <div class="cost"><span>🚗 Car rental</span><strong>~₹32K / 10 days</strong></div>
+        <div class="cost"><span>🏡 Airbnb</span><strong>₹3–4K / night</strong></div>
+        <div class="cost"><span>🍕 Food</span><strong>₹2–3K / day</strong></div>
+        <div class="cost"><span>🛍️ Shopping</span><strong>Depends on you</strong></div>
+      </div>
+      <div class="total"><span>Total for 2 people</span><span>~₹2 lakh</span></div>
+      <p class="small" style="margin-top:12px">Our approximate trip cost including flights, visa, stays, car, food & shopping. Prices can vary by season and travel style.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>What to Buy & Where</h2><span class="num">06</span></div>
+    <div class="card">
+      <div class="chips">
+        <span class="chip">Nabeul → Pottery & ceramics</span>
+        <span class="chip">Djerba / Guellala → Local crafts</span>
+        <span class="chip">Tunis Medina / Hafsia → Souvenirs & spices</span>
+        <span class="chip">Hammamet → Crafts & textiles</span>
+      </div>
+      <p style="margin-top:18px"><strong>And yes — bargaining is part of the experience</strong> in many souks. 😉</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Top 10 Photo Locations for Your Instagram</h2><span class="num">07</span></div>
+    <div class="card">
+      <div class="photo-list">
+        <div class="photo"><span class="emoji">🤍</span><div><strong>Sidi Bou Said</strong> Blue doors</div></div>
+        <div class="photo"><span class="emoji">🏜️</span><div><strong>Desert safari</strong> Camel at sunset</div></div>
+        <div class="photo"><span class="emoji">🌊</span><div><strong>El Haouaria</strong> Cliffs</div></div>
+        <div class="photo"><span class="emoji">🏖️</span><div><strong>Djerba Beach</strong> Sunrise / sunset</div></div>
+        <div class="photo"><span class="emoji">🎨</span><div><strong>Djerbahood</strong> Murals</div></div>
+        <div class="photo"><span class="emoji">🏛️</span><div><strong>El Jem</strong> Amphitheatre</div></div>
+        <div class="photo"><span class="emoji">⛵</span><div><strong>Yasmine Hammamet</strong> Marina</div></div>
+        <div class="photo"><span class="emoji">🌴</span><div><strong>Sousse</strong> Corniche</div></div>
+        <div class="photo"><span class="emoji">🌅</span><div><strong>Café des Délices</strong> Terrace</div></div>
+        <div class="photo"><span class="emoji">🏺</span><div><strong>Nabeul</strong> Pottery streets</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Have More Than 10 Days?</h2><span class="num">08</span></div>
+    <div class="card">
+      <p>If you have extra time, these are the places we'd add to the route:</p>
+      <div class="more-grid">
+        <div class="more">
+          <h3>🌊 Hammamet</h3>
+          <p>Medina • Kasbah • Beach • Yasmine Marina</p>
+        </div>
+        <div class="more">
+          <h3>🏺 Nabeul</h3>
+          <p>Pottery • Local markets • Ceramics • Flower products</p>
+        </div>
+        <div class="more">
+          <h3>🌊 El Haouaria</h3>
+          <p>Cliffs • Caves • Lighthouse • Sunset</p>
+        </div>
+        <div class="more">
+          <h3>🏜️ Sahara</h3>
+          <p>Add a Sahara trip if you have more days — especially in the cooler months.</p>
+        </div>
+      </div>
+      <div class="card tip" style="margin-top:15px;padding:17px">
+        <strong>If we did Tunisia again:</strong> we'd slow down and add these instead of trying to squeeze everything into 10 days.
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="eyebrow">That's the practical guide 🇹🇳</div>
+    <h2>There’s so much more beyond this route.</h2>
+    <p>Follow along for Part 3 — hotels, exact stays, food spots, Google Maps pins & more.</p>
+    <a class="insta" href="https://www.instagram.com/prinsiago?stkn=Y3AwY2NuaWJxazNp" target="_blank" rel="noopener">
+      <span class="insta-icon"></span> Follow @prinsiago
+    </a>
+  </div>
+
+  <footer>Created by Prinsiago • Tunisia Travel Guide</footer>
+</div>
+</body>
+</html>
