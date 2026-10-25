@@ -9,32 +9,86 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(100% - 30px,1120px);margin-inline:auto}
 header{padding:18px 0}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;font-size:1.18rem}.brand-mark{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;color:white;background:linear-gradient(135deg,var(--deep),var(--sky));font-size:1.25rem}.toplink{font-size:.86rem;font-weight:800;background:#fff;padding:10px 15px;border-radius:99px;border:1px solid var(--line)}
 .hero{position:relative;overflow:hidden;margin:8px auto 20px;padding:clamp(28px,6vw,68px);border-radius:28px;color:#fff;background:linear-gradient(115deg,rgba(4,76,96,.96),rgba(6,126,149,.9),rgba(58,177,192,.82)),url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85') center/cover;box-shadow:0 14px 34px #07556b1c}
-.hero:after{content:"✈  ☀  🌊";position:absolute;right:clamp(18px,4vw,45px);bottom:20px;font-size:clamp(1.5rem,4vw,2.6rem);opacity:.85}.eyebrow{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;font-weight:900;color:#c8f4f4}.hero h1{font-size:clamp(2.55rem,7vw,5.4rem);line-height:.98;letter-spacing:-.055em;margin:16px 0;max-width:750px}.hero p{max-width:650px;color:#e7f8f8;font-size:1.05rem;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:99px;font-weight:850;font-size:.87rem;background:#fff;color:var(--deep)}.btn.ghost{background:#ffffff16;color:#fff;border:1px solid #ffffff70}
+.hero:after{content:"✈  ☀  🌊";position:absolute;right:clamp(18px,4vw,45px);bottom:20px;font-size:clamp(1.5rem,4vw,2.6rem);opacity:.85}.eyebrow{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;font-weight:900;color:#c8f4f4}.hero h1{font-size:36px;line-height:1.2;letter-spacing:-.055em;margin:16px 0;max-width:750px}.hero p{max-width:650px;color:#e7f8f8;font-size:1.05rem;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:99px;font-weight:850;font-size:.87rem;background:#fff;color:var(--deep)}.btn.ghost{background:#ffffff16;color:#fff;border:1px solid #ffffff70}
 main{padding-bottom:50px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:25px 0 16px}.section-head h2{margin:0;font-size:clamp(1.55rem,4vw,2.2rem);letter-spacing:-.035em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:.9rem}.count{white-space:nowrap;font-size:.8rem;font-weight:850;padding:7px 11px;border-radius:99px;background:#d7eeee;color:var(--deep)}
 .featured{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 9px 26px #1c59600a}.feature-image{min-height:300px;background:linear-gradient(0deg,#062f3a35,#062f3a00),url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}.feature-image span{position:absolute;left:20px;top:20px;background:#fff;color:var(--deep);padding:7px 11px;border-radius:99px;font-size:.74rem;font-weight:900}.feature-copy{padding:clamp(22px,4vw,38px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:900;color:var(--coral)}.feature-copy h3{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.08;letter-spacing:-.04em;margin:10px 0}.feature-copy p{color:var(--muted);margin:0 0 18px}.textlink{color:var(--teal);font-weight:900;font-size:.9rem}.textlink span{color:var(--coral);padding-left:5px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.trip-card{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 8px 24px #1c596008;transition:transform .18s ease,box-shadow .18s ease}.trip-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px #1c596015}.trip-image{height:180px;background-size:cover;background-position:center;position:relative}.trip-image:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#062f3a70)}.trip-badge{position:absolute;z-index:1;top:13px;left:13px;background:#ffffffed;color:var(--deep);border-radius:99px;padding:6px 10px;font-size:.7rem;font-weight:900}.trip-body{padding:19px;display:flex;flex-direction:column;align-items:flex-start;flex:1}.trip-body h3{margin:0 0 7px;font-size:1.3rem;letter-spacing:-.025em}.trip-body p{font-size:.88rem;color:var(--muted);margin:0 0 17px;flex:1}.trip-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:17px}.trip-meta span{font-size:.72rem;border-radius:99px;background:#eaf6f6;padding:5px 9px;font-weight:750;color:#38616a}.card-link{display:inline-block;background:var(--deep);color:#fff;border-radius:99px;padding:9px 14px;font-size:.82rem;font-weight:850}.card-link.disabled{background:#e6f0f0;color:#557078}
 .note{margin:24px 0;background:var(--cream);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:16px 19px;color:#465e62}.note strong{color:var(--ink)}.cta{margin:30px 0 12px;border-radius:22px;padding:clamp(23px,5vw,40px);background:linear-gradient(120deg,#07556b,#087f97,#40b5c5);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0 0 7px;font-size:clamp(1.55rem,4vw,2.25rem)}.cta p{margin:0;color:#e2f6f6;max-width:620px;font-size:.92rem}.cta .btn{flex-shrink:0}
-footer{padding:26px 0 34px;color:var(--muted);font-size:.82rem}.foot-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #cfe1e1;padding-top:19px}
+footer{padding:26px 0 34px;color:var(--muted);font-size:.82rem}.foot-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #cfe1e1;padding-top:19px} .travel-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  .travel-highlights li {
+    padding: 9px 14px;
+    margin-bottom: 9px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  .subscribe-text {
+    margin: 24px 0;
+  }
+
+  .collaboration a {
+    color: #167f83;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .collaboration a:hover {
+    text-decoration: underline;
+  }
+
+  .tagline {
+    margin-top: 28px;
+    color: #e47f70;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
 @media(max-width:800px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.featured{grid-template-columns:1fr}.feature-image{min-height:245px}.cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:520px){.wrap{width:min(100% - 22px,1120px)}.cards{grid-template-columns:1fr}.trip-image{height:205px}.hero{border-radius:22px}.section-head{align-items:flex-start}.count{margin-top:4px}.feature-image{min-height:220px}}
 </style></head>
 <body>
 <header class="wrap"><div class="topbar"><a class="brand" href="index.html"><span class="brand-mark">✈</span><span>prinsiago<span style="color:var(--coral)">.</span></span></a><a class="toplink" href="#itineraries">Explore itineraries ↘</a></div></header>
-<section class="hero wrap"><div class="eyebrow">✦ Discover the world with Prinsiago</div><h1>Real journeys.<br>Hidden gems. Unforgettable stories.</h1><p>From hidden gems and affordable destinations to unforgettable experiences and complete travel guides, we’re here to inspire you to explore more, travel smarter, and plan your next adventure with confidence.</p><div class="hero-actions"><a class="btn" href="#itineraries">Explore all guides ↓</a><a class="btn ghost" href="#about">About Us!</a></div></section>
+<section class="hero wrap"><div class="eyebrow">Welcome to Prinsiago ✈️</div><h1>Prinkush &amp; Sonia | Travel Couple </h1><p>We’re here to inspire you to explore more, travel smarter, and plan your next adventure with confidence - from hidden gems and budget-friendly destinations to unforgettable experiences and detailed travel guides.</p><div class="hero-actions"><a class="btn" href="#itineraries">Explore all guides ↓</a><a class="btn ghost" href="#about">About Us!</a></div></section>
 <main class="wrap" id="itineraries">
 <div class="section-head"><div><h2>🧭 Find your next adventure</h2><p>Handpicked guides to help you plan the journey.</p></div><span class="count">Travel guides</span></div>
 <section class="featured"><div class="feature-image"><span>✦ Featured guide</span></div><div class="feature-copy"><div class="label">Türkiye · Road trip</div><h3>Turkey, the scenic way 🇹🇷</h3><p>From Cappadocia’s sunrise balloons to Antalya, Ölüdeniz’s turquoise coast and Istanbul’s colourful streets — explore the route, day-by-day ideas and practical tips.</p><div class="trip-meta"><span>🚗 Road trip</span><span>🎈 Balloons</span><span>🌊 Coast</span></div><a class="textlink" href="Turkey_itinerary.html">Open Turkey itinerary <span>↗</span></a></div></section>
 <div class="section-head"><div><h2>🌍 All itineraries</h2><p>Choose a destination and start building your trip.</p></div></div>
 <section class="cards">
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">✈️ City + coast</span></div><div class="trip-body"><h3>Turkey 🇹🇷</h3><p>Hot-air balloons, ancient streets, Mediterranean beaches and an Ölüdeniz foam-party boat trip.</p><div class="trip-meta"><span>Cappadocia</span><span>Antalya</span><span>Ölüdeniz</span></div><a class="card-link" href="Turkey_itinerary.html">View itinerary ↗</a></div></article>
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">🏝️ Islands + city</span></div><div class="trip-body"><h3>Thailand 🇹🇭</h3><p>Plan a Thailand escape with city exploring, island-hopping, beach days and memorable local experiences.</p><div class="trip-meta"><span>Bangkok</span><span>Phuket</span><span>Phi Phi</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">🏛️ Culture + desert</span></div><div class="trip-body"><h3>Tunisia 🇹🇳</h3><p>A road-trip route through seaside towns, Roman history, medinas, Djerba and optional Sahara adventures.</p><div class="trip-meta"><span>Tunis</span><span>Sousse</span><span>Djerba</span></div><a class="card-link" href="Tunisia_itinerary_Part1.html">View itinerary <span>↗</span></a></div></article>
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">🌴 Royal escape</span></div><div class="trip-body"><h3>Udaipur 🇮🇳</h3><p>Lakeside palaces, sunset boat rides, old-city lanes and romantic Rajasthan views.</p><div class="trip-meta"><span>Lake Pichola</span><span>Palaces</span><span>Old city</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">🏔️ Mountains</span></div><div class="trip-body"><h3>Jibhi 🇮🇳</h3><p>A peaceful Himachal escape with cedar forests, riverside cafés, wooden cottages and mountain trails.</p><div class="trip-meta"><span>Himachal</span><span>Forest trails</span><span>Mountain stay</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
-<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80')"><span class="trip-badge">🧳 More to come</span></div><div class="trip-body"><h3>More destinations ✨</h3><p>New routes, practical guides and trip ideas will be added here as they’re ready.</p><div class="trip-meta"><span>Budget tips</span><span>Routes</span><span>Experiences</span></div><a class="card-link" href="#contact">Stay inspired ↓</a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">✈️ City + coast</span></div><div class="trip-body"><h3>Turkey 🇹🇷</h3><p>Hot-air balloons, ancient streets, Mediterranean beaches and an Ölüdeniz foam-party boat trip.</p><div class="trip-meta"><span>Cappadocia</span><span>Antalya</span><span>Ölüdeniz</span></div><a class="card-link" href="Turkey_itinerary.html">View itinerary ↗</a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">🏝️ Islands + city</span></div><div class="trip-body"><h3>Thailand 🇹🇭</h3><p>Plan a Thailand escape with city exploring, island-hopping, beach days and memorable local experiences.</p><div class="trip-meta"><span>Bangkok</span><span>Phuket</span><span>Phi Phi</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">🏛️ Culture + desert</span></div><div class="trip-body"><h3>Tunisia 🇹🇳</h3><p>A road-trip route through seaside towns, Roman history, medinas, Djerba and optional Sahara adventures.</p><div class="trip-meta"><span>Tunis</span><span>Sousse</span><span>Djerba</span></div><a class="card-link" href="Tunisia_itinerary_Part1.html">View itinerary <span>↗</span></a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">🌴 Royal escape</span></div><div class="trip-body"><h3>Udaipur 🇮🇳</h3><p>Lakeside palaces, sunset boat rides, old-city lanes and romantic Rajasthan views.</p><div class="trip-meta"><span>Lake Pichola</span><span>Palaces</span><span>Old city</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">🏔️ Mountains</span></div><div class="trip-body"><h3>Jibhi 🇮🇳</h3><p>A peaceful Himachal escape with cedar forests, riverside cafés, wooden cottages and mountain trails.</p><div class="trip-meta"><span>Himachal</span><span>Forest trails</span><span>Mountain stay</span></div><a class="card-link disabled" href="#contact">Coming soon</a></div></article>
+<article class="trip-card"><div class="trip-image" role="img" aria-label="Destination travel photograph" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><span class="trip-badge">🧳 More to come</span></div><div class="trip-body"><h3>More destinations ✨</h3><p>New routes, practical guides and trip ideas will be added here as they’re ready.</p><div class="trip-meta"><span>Budget tips</span><span>Routes</span><span>Experiences</span></div><a class="card-link" href="#contact">Stay inspired ↓</a></div></article>
 </section>
-<section class="cta" id="about"><div><h2>Welcome to Prinsiago ✈️ </h2><p>We're Prinkush & Sonia - a couple exploring the world, one adventure at a time. 🌍 <br>
-We’re couple travel creators sharing our international adventures, budget-friendly trips, destination guides, detailed itineraries, practical travel tips, and unique experiences from around the world.</p></div><a class="btn" href="#itineraries">Browse guides ↑</a></section>
+<section class="cta" id="about"><div><h2>What you'll find here</h2><ul class="travel-highlights">
+    <li>✈️ International Travel</li>
+    <li>💸 Budget-Friendly Trips</li>
+    <li>📍 Destination Guides</li>
+    <li>🗺️ Detailed Itineraries</li>
+    <li>✨ Hidden Gems &amp; Unique Experiences</li>
+    <li>💡 Practical Travel Tips</li>
+  </ul><p class="subscribe-text">
+    Subscribe for more travel inspiration, helpful guides,
+    and adventures from around the world!
+  </p>
+
+  <p class="collaboration">
+    <strong>For brand partnerships &amp; collaborations:</strong><br>
+    📩 <a href="mailto:prinsiago@gmail.com">
+      prinsiago@gmail.com
+    </a>
+  </p>
+
+  <p class="tagline">
+    Explore more. Spend smarter. Make memories. ♡
+  </p></div><a class="btn" href="#itineraries">Browse guides ↑</a></section>
 </main>
-<footer class="wrap"><div class="foot-inner"><span><b>prinsiago.</b> · Travel guides & itineraries</span><span>Explore more. Plan better. Make memories.</span></div></footer>
+<footer class="wrap"><div class="foot-inner"><span><b>prinsiago.</b> · Travel guides &amp; itineraries</span><span>Explore more. Plan better. Make memories.</span></div></footer>
+
 </body></html>
