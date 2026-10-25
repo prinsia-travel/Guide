@@ -1,176 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e8f5f5">
-<title>Turkey Travel Itinerary | Prinsiago</title>
-<style>
-:root{
-  --page:#e8f4f4;--card:#fff;--ink:#173c47;--muted:#587078;
-  --teal:#087c96;--deep:#07556b;--sky:#45b8c9;--coral:#e98276;
-  --line:#d9e8e8;--cream:#fff9ed;--gold:#efbf4d;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.62}
-a{color:inherit}
-.wrap{width:min(100% - 28px,900px);margin:auto}
-.hero{margin:22px auto 18px;padding:clamp(24px,6vw,52px);border-radius:28px;overflow:hidden;position:relative;color:#fff;background:linear-gradient(135deg,#08718c 0%,#0794ad 58%,#45b9c8 100%);box-shadow:0 12px 30px #0c68751b}
-.hero:after{content:"☀️  🌊  🌴";position:absolute;right:20px;bottom:17px;font-size:clamp(1.4rem,4vw,2.4rem);opacity:.9}
-.eyebrow{font-size:.72rem;letter-spacin
-g:.17em;text-transform:uppercase;font-weight:800;color:#d4f4f4}
-h1{font-size:clamp(2.2rem,7vw,4rem);line-height:1.04;letter-spacing:-.04em;margin:14px 0 16px;max-width:650px}
-.hero p{max-width:650px;color:#e5f8f8;margin:0;font-size:1.02rem}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;max-width:650px}
-.tag{font-size:.78rem;padding:7px 12px;border:1px solid #ffffff48;background:#ffffff18;border-radius:99px;white-space:nowrap}
-nav{position:sticky;top:0;z-index:10;background:#e8f4f4ed;backdrop-filter:blur(12px);padding:10px max(14px,calc((100% - 870px)/2));display:flex;gap:7px;overflow-x:auto;border-bottom:1px solid #d5e5e5}
-nav a{flex:0 0 auto;text-decoration:none;font-size:.78rem;font-weight:750;padding:7px 11px;border-radius:99px;background:#fff;color:#24515b}
-section.panel{background:var(--card);border-radius:23px;padding:clamp(20px,4vw,32px);margin:18px auto;box-shadow:0 7px 25px #1d65700c}
-h2{font-size:clamp(1.45rem,4vw,2rem);line-height:1.2;margin:0 0 18px;letter-spacing:-.025em}
-h3{font-size:1.05rem;line-height:1.35;margin:0 0 12px}
-.intro{color:var(--muted);margin-top:-4px}
-.route{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.route .place{background:#eaf6f6;
-border-radius:99px;padding:8px 12px;font-size:.8rem;font-weight:800}
-.route .arrow{color:var(--coral);font-weight:900}
-.small{font-size:.82rem;color:var(--muted)}
-.callout{background:var(--cream);border-left:4px solid var(--gold);border-radius:12px;padding:15px 16px;margin-top:13px}
-.callout.alert{background:#fff0ed;border-left-color:var(--coral)}
-.callout strong{display:block;margin-bottom:3px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.day{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff}
-.dayhead{background:linear-gradient(100deg,var(--deep),var(--teal),
-#0788a1);color:#fff;padding:14px 17px;font-weight:850;font-size:.9rem;letter-spacing:.015em}
-.daybody{padding:17px 19px}
-ul{padding-left:19px;margin:8px 0}
-li{padding:2px 0}
-li::marker{color:var(--coral)}
-.feature{background:linear-gradient(135deg,#07566b,#087e95);color:#fff;border-radius:19px;padding:clamp(22px,4vw,32px);margin-top:16px}
-.feature .eyebrow{color:#a8e9ed}
-.feature h3{font-size:clamp(1.45rem,4vw,2rem);margin:8px 0 10px}
-.feature p{color:#e3f6f6}
-.feature ul{color:#f3ffff}
-.pill-label{display:inline-block;border-radius:5px;background:var(--coral);padding:5px 10px;font-size:.72rem;font-weight:900;letter-spacing:.07em;margin-b
-ottom:10px}
-.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.tip{background:#f6fbfa;border:1px solid var(--line);padding:15px;border-radius:13px}
-.tip strong{display:block;margin-bottom:5px}
-footer{background:linear-gradient(120deg,#07566b,#087f97,#40b5c5);color:white;text-align:center;padding:42px 20px 48px;margin-top:25px}
-footer h2{font-size:clamp(1.7rem,5vw,2.8rem);margin:10px auto}
-footer p{color:#e0f6f6;max-width:600px;margin:0 auto}
-@media(max-width:620px){.grid,.tips{grid-template-columns:1fr}.hero{margin-top:14px;border-radius:
-24px}.route{gap:6px}.route .place{font-size:.75rem;padding:7px 10px}section.panel{border-radius:20px}}
-@media print{nav{position:static}.hero,.dayhead,.feature,footer{print-color-adjust:exact;-webkit-print-color-adjust:exact}.wrap{width:100%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8f5f5">
+  <title>Turkey Travel Itinerary | Prinsiago</title>
+  <style>
+    :root {
+      --page: #e8f4f4;
+      --card: #fff;
+      --ink: #173c47;
+      --muted: #587078;
+      --teal: #087c96;
+      --deep: #07556b;
+      --sky: #45b8c9;
+      --coral: #e98276;
+      --line: #d9e8e8;
+      --cream: #fff9ed;
+      --gold: #efbf4d;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.62
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(100% - 30px, 1120px);
+      margin: auto
+    }
+
+    header {
+      padding: 18px 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      font-size: 1.18rem;
+    }
+
+    .brand-mark {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 100%;
+      color: white;
+      background: url(assets/Turkey-thumb.jpg) no-repeat center / cover;
+      font-size: 1.25rem;
+    }
+
+    .hero {
+      margin: 22px auto 18px;
+      padding: clamp(24px, 6vw, 52px);
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+      background: linear-gradient(115deg, rgba(4, 76, 96, .66), rgba(6, 126, 149, .3), rgba(58, 177, 192, .3)), url(assets/Turkey-thumb.jpg) center / cover;
+      box-shadow: 0 12px 30px #0c68751b;
+    }
+
+    .hero:after {
+      content: "☀️  🌊  🌴";
+      position: absolute;
+      right: 20px;
+      bottom: 17px;
+      font-size: clamp(1.4rem, 4vw, 2.4rem);
+      opacity: .9;
+      display: none;
+    }
+
+    .eyebrow {
+      font-size: .72rem;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #d4f4f4
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.04;
+      letter-spacing: -.04em;
+      margin: 14px 0 16px;
+      max-width: 650px
+    }
+
+    .hero p {
+      max-width: 450px;
+      color: #e5f8f8;
+      margin: 0;
+      font-size: 1.02rem
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+      max-width: 650px
+    }
+
+    .tag {
+      font-size: .78rem;
+      padding: 7px 12px;
+      border: 1px solid #ffffff48;
+      background: #ffffff18;
+      border-radius: 99px;
+      white-space: nowrap;
+      background: linear-gradient(115deg, rgba(20, 20, 20, 0.96), rgba(40, 40, 40, 0.9), rgba(70, 70, 70, 0.82));
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #e8f4f4ed;
+      backdrop-filter: blur(12px);
+      padding: 10px max(14px, calc((100% - 870px)/2));
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      border-bottom: 1px solid #d5e5e5
+    }
+
+    nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 750;
+      padding: 7px 11px;
+      border-radius: 99px;
+      background: #fff;
+      color: #24515b
+    }
+
+    section.panel {
+      background: var(--card);
+      border-radius: 23px;
+      padding: clamp(20px, 4vw, 32px);
+      margin: 18px auto;
+      box-shadow: 0 7px 25px #1d65700c
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      line-height: 1.2;
+      margin: 0 0 18px;
+      letter-spacing: -.025em
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      line-height: 1.35;
+      margin: 0 0 12px
+    }
+
+    .intro {
+      color: var(--muted);
+      margin-top: -4px
+    }
+
+    .route {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px
+    }
+
+    .route .place {
+      background: #eaf6f6;
+      border-radius: 99px;
+      padding: 8px 12px;
+      font-size: .8rem;
+      font-weight: 800
+    }
+
+    .route .arrow {
+      color: var(--coral);
+      font-weight: 900
+    }
+
+    .small {
+      font-size: .82rem;
+      color: var(--muted)
+    }
+
+    .callout {
+      background: var(--cream);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 15px 16px;
+      margin-top: 13px
+    }
+
+    .callout.alert {
+      background: #fff0ed;
+      border-left-color: var(--coral)
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 3px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px
+    }
+
+    .day {
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      overflow: hidden;
+      background: #fff
+    }
+
+    .dayhead {
+      background: linear-gradient(100deg, var(--deep), var(--teal),
+          #0788a1);
+      color: #fff;
+      padding: 14px 17px;
+      font-weight: 850;
+      font-size: .9rem;
+      letter-spacing: .015em
+    }
+
+    .daybody {
+      padding: 17px 19px
+    }
+
+    ul {
+      padding-left: 19px;
+      margin: 8px 0
+    }
+
+    li {
+      padding: 2px 0
+    }
+
+    li::marker {
+      color: var(--coral)
+    }
+
+    .feature {
+      /* background: linear-gradient(135deg, #07566b, #087e95); */
+      background: linear-gradient(115deg, rgba(4, 76, 96, .66), rgba(6, 126, 149, .3), rgba(58, 177, 192, .3)), url(assets/Turkey-boat.jpg) 45% 62%/ cover;
+      color: #fff;
+      border-radius: 19px;
+      padding: clamp(22px, 4vw, 32px);
+      margin-top: 16px
+    }
+
+    .feature .eyebrow {
+      color: #a8e9ed
+    }
+
+    .feature h3 {
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      margin: 8px 0 10px
+    }
+
+    .feature p {
+      color: #e3f6f6;
+      max-width: 650px;
+    }
+
+    .feature ul {
+      color: #f3ffff
+    }
+
+    .pill-label {
+      display: inline-block;
+      border-radius: 5px;
+      background: var(--coral);
+      padding: 5px 10px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .07em;
+      margin-bottom: 10px
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px
+    }
+
+    .tip {
+      background: #f6fbfa;
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 13px
+    }
+
+    .tip strong {
+      display: block;
+      margin-bottom: 5px
+    }
+
+    footer {
+      background: linear-gradient(115deg, rgba(4, 76, 96, .66), rgba(6, 126, 149, .3), rgba(58, 177, 192, .3)), url(assets/Turkey-foot.jpg) center 33%/ cover;
+      color: white;
+      text-align: center;
+      padding: 42px 20px 48px;
+      margin-top: 25px
+    }
+
+    footer h2 {
+      font-size: clamp(1.7rem, 5vw, 2.8rem);
+      margin: 10px auto
+    }
+
+    footer p {
+      color: #e0f6f6;
+      max-width: 600px;
+      margin: 0 auto
+    }
+
+    @media(max-width:620px) {
+
+      .grid,
+      .tips {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        margin-top: 14px;
+        border-radius:
+          24px
+      }
+
+      .route {
+        gap: 6px
+      }
+
+      .route .place {
+        font-size: .75rem;
+        padding: 7px 10px
+      }
+
+      section.panel {
+        border-radius: 20px
+      }
+    }
+
+    @media print {
+      nav {
+        position: static
+      }
+
+      .hero,
+      .dayhead,
+      .feature,
+      footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact
+      }
+
+      .wrap {
+        width: 100%
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="hero wrap">
-  <div class="eyebrow">✈ Made for curious Indian travellers</div>
-  <h1>🇹🇷 Our Turkey<br>Travel Itinerary</h1>
-  <p>From Cappadocia’s sunrise balloons to Antalya’s coastline, Ölüdeniz’s foam-party vibes and Istanbul’s colourful streets — a practical route for a trip full of variety.</p>
-  <div class="tags"><span class="tag">🚗 Road trip</span><span class="tag">🎈 Cappadocia</span><span class="tag">🌊 Beaches</span><span class="tag">🏛️ History</span><span class="tag">🎉 Foam party</span></div>
-</header>
-<nav aria-label="Itinerary navigation"><a href="#route">🗺️ Our route</a><a href="#before">✈️ Before you go</a><a href="#arrival">Istanbul arrival</a><a href="#cappadocia">Cappadocia</a><a href="#antalya">Antalya</a><a href="#oludeniz">Ölüdeniz</a><a href="#istanbul">Istanbul · 3 days</a></nav>
-<main class="wrap">
-  <section class="panel" id="route">
-    <h2>🗺️ Our Route</h2>
-    <div class="route"><span class="place">Istanbul</span><span class="arrow">→</span><span class="place">Cappadocia</span><span class="arrow">→</span><span class="place">Antalya</span><span class="arrow">→</span><span class="place">Fethiye / Ölüdeniz</span><span class="arrow">→</span><span class="place">Istanbul</span></div>
-    <p class="small">Rental car for the road-trip portion, then public transport to explore Istanbul at the end.</p>
-  </section>
-  <section class="panel" id="before">
-    <h2>✈️ Before You Go</h2>
-    <p class="intro">This itinerary combines city exploring, long drives, landscapes and beach time. Keep the 
-route flexible around flights, weather and how you feel after each journey.</p>
-    <div class="callout"><strong>🚗 Best for this route</strong>Self-driving gives you flexibility to stop, explore smaller places and travel at your own pace. Confirm one-way rental rules and drop-off arrangements before booking.</div>
-    <div class="callout"><strong>🎈 Think about the season</strong>Cappadocia balloon flights depend on weather and official permissions. If seeing the balloons is important, leave a backup morning when possible.</div>
-    <div class="callout alert"><strong>Important</strong>Road times, opening hours, transport schedules and boat-party 
-inclusions can change. Verify current details before booking.</div>
-  </section>
-  <section class="panel" id="arrival">
-    <h2>🌆 Istanbul · Arrival Day</h2>
-    <p class="intro">We kept the first day easy to recover from jet lag, then went out to get our first feel of the city.</p>
-    <article class="day"><div class="dayhead">ARRIVAL DAY — REST & ISTIKLAL STREET 🌙</div><div class="daybody"><ul><li>✈️ Arrive in Istanbul and collect your luggage.</li><li>🏨 Head to the hotel and rest for around 6–7 hours to recover from jet lag.</li><li>🚶 In the evening, explore Istiklal Street and the surrounding lanes.</li><li>☕ Enjoy cafés, Turkish snacks, shopping streets and the lively atmosphere.</li><li>🌃 Take a relaxed 
-walk and enjoy the city after dark.</li></ul></div></article>
-    <div class="callout"><strong>💡 Little tip</strong>Istiklal Street is lively late into the night, but individual shops and cafés have different closing times. Check ahead if there’s a particular place you want to visit.</div>
-  </section>
-  <section class="panel" id="cappadocia">
-    <h2>🎈 Cappadocia</h2>
-    <p class="intro">Fairy chimneys, cave-hotel vibes, underground cities and the iconic sunrise balloons.</p>
-    <div class="grid">
-      <article class="day"><div class="dayhead">TRAVEL DAY — ISTANBUL → CAPPADOCIA 🚗</div><div class="daybody"><ul><li>Pick up your rental car in the morning.</
-li><li>Start the road trip towards Cappadocia.</li><li>Arrive in Göreme, check in and rest.</li></ul><p class="small">It’s a long drive, so allow most of the day for travel, fuel and rest stops.</p></div></article>
-      <article class="day"><div class="dayhead">EXPLORE DAY 1 — VALLEYS & SUNSET</div><div class="daybody"><ul><li>Visit Göreme Open-Air Museum.</li><li>Explore Paşabağ (Monk’s Valley) and its fairy chimneys.</li><li>Walk around Çavuşin Village.</li><li>Watch sunset at Red Valley.</li></ul></div></article>
-      <article class="day"><div class="dayhead">EXPLORE DAY 2 — BALLOONS & HISTORY 🎈</div><div class="daybody"><ul><li>Take a sunrise hot-air balloon ride, weather permitting.</li><li>Or watch the 
-balloons from a scenic viewpoint.</li><li>Visit Uçhisar Castle for panoramic views.</li><li>Explore Kaymaklı or Derinkuyu Underground City.</li><li>If time allows, walk a section of Ihlara Valley.</li></ul></div></article>
-      <article class="day"><div class="dayhead">EXPLORE DAY 3 — POTTERY & LANDSCAPES</div><div class="daybody"><ul><li>Visit Love Valley and Devrent Valley.</li><li>Explore Zelve Open-Air Museum.</li><li>Head to Avanos for a pottery workshop.</li><li>Enjoy Göreme’s cafés, shops and scenic views.</li></ul></div></article>
+  <header class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"></span>
+        <span>prinsiago</span>
+      </a>
     </div>
-    <div class="callout"><strong>🎈 Don’t miss</strong>Watching the balloons rise over Cappadocia at 
-sunrise. Balloon flights depend on weather and official permissions, so a backup morning is useful.</div>
-  </section>
-  <section class="panel" id="antalya">
-    <h2>🌊 Antalya</h2>
-    <p class="intro">One full day for a waterfall, Mediterranean views and a little time to unwind before the next drive.</p>
-    <div class="grid">
-      <article class="day"><div class="dayhead">DÜDEN WATERFALLS 💦</div><div class="daybody"><ul><li>Travel from Cappadocia to Antalya.</li><li>Visit Düden Waterfalls and enjoy the natural scenery.</li><li>Take time for photographs and a relaxed walk.</li></ul></div></article>
-      <article class="day"><div 
-class="dayhead">KONYAALTI BEACH 🩵</div><div class="daybody"><ul><li>Head to Konyaaltı Beach for Mediterranean views.</li><li>Walk along the coast and spend some time by the water.</li><li>Enjoy dinner locally and rest before continuing to Ölüdeniz.</li></ul></div></article>
+  </header>
+  <div class="hero wrap">
+    <div class="eyebrow">✈ Made for curious Indian travellers</div>
+    <h1>🇹🇷 Our Turkey<br>Travel Itinerary</h1>
+    <p>From Cappadocia’s sunrise balloons to Antalya’s coastline, Ölüdeniz’s foam-party vibes and Istanbul’s colourful
+      streets — a practical route for a trip full of variety.</p>
+    <div class="tags"><span class="tag">🚗 Road trip</span><span class="tag">🎈 Cappadocia</span><span class="tag">🌊
+        Beaches</span><span class="tag">🏛️ History</span><span class="tag">🎉 Foam party</span></div>
+  </div>
+  <nav aria-label="Itinerary navigation"><a href="#route">🗺️ Our route</a><a href="#before">✈️ Before you go</a><a
+      href="#arrival">Istanbul arrival</a><a href="#cappadocia">Cappadocia</a><a href="#antalya">Antalya</a><a
+      href="#oludeniz">Ölüdeniz</a><a href="#istanbul">Istanbul · 3 days</a></nav>
+  <main class="wrap">
+    <section class="panel" id="route">
+      <h2>🗺️ Our Route</h2>
+      <div class="route"><span class="place">Istanbul</span><span class="arrow">→</span><span
+          class="place">Cappadocia</span><span class="arrow">→</span><span class="place">Antalya</span><span
+          class="arrow">→</span><span class="place">Fethiye / Ölüdeniz</span><span class="arrow">→</span><span
+          class="place">Istanbul</span></div>
+      <p class="small">Rental car for the road-trip portion, then public transport to explore Istanbul at the end.</p>
+    </section>
+    <section class="panel" id="before">
+      <h2>✈️ Before You Go</h2>
+      <p class="intro">This itinerary combines city exploring, long drives, landscapes and beach time. Keep the
+        route flexible around flights, weather and how you feel after each journey.</p>
+      <div class="callout"><strong>🚗 Best for this route</strong>Self-driving gives you flexibility to stop, explore
+        smaller places and travel at your own pace. Confirm one-way rental rules and drop-off arrangements before
+        booking.</div>
+      <div class="callout"><strong>🎈 Think about the season</strong>Cappadocia balloon flights depend on weather and
+        official permissions. If seeing the balloons is important, leave a backup morning when possible.</div>
+      <div class="callout alert"><strong>Important</strong>Road times, opening hours, transport schedules and boat-party
+        inclusions can change. Verify current details before booking.</div>
+    </section>
+    <section class="panel" id="arrival">
+      <h2>🌆 Istanbul · Arrival Day</h2>
+      <p class="intro">We kept the first day easy to recover from jet lag, then went out to get our first feel of the
+        city.</p>
+      <article class="day">
+        <div class="dayhead">ARRIVAL DAY — REST & ISTIKLAL STREET 🌙</div>
+        <div class="daybody">
+          <ul>
+            <li>✈️ Arrive in Istanbul and collect your luggage.</li>
+            <li>🏨 Head to the hotel and rest for around 6–7 hours to recover from jet lag.</li>
+            <li>🚶 In the evening, explore Istiklal Street and the surrounding lanes.</li>
+            <li>☕ Enjoy cafés, Turkish snacks, shopping streets and the lively atmosphere.</li>
+            <li>🌃 Take a relaxed
+              walk and enjoy the city after dark.</li>
+          </ul>
+        </div>
+      </article>
+      <div class="callout"><strong>💡 Little tip</strong>Istiklal Street is lively late into the night, but individual
+        shops and cafés have different closing times. Check ahead if there’s a particular place you want to visit.</div>
+    </section>
+    <section class="panel" id="cappadocia">
+      <h2>🎈 Cappadocia</h2>
+      <p class="intro">Fairy chimneys, cave-hotel vibes, underground cities and the iconic sunrise balloons.</p>
+      <div class="grid">
+        <article class="day">
+          <div class="dayhead">TRAVEL DAY — ISTANBUL → CAPPADOCIA 🚗</div>
+          <div class="daybody">
+            <ul>
+              <li>Pick up your rental car in the morning.</ li>
+              <li>Start the road trip towards Cappadocia.</li>
+              <li>Arrive in Göreme, check in and rest.</li>
+            </ul>
+            <p class="small">It’s a long drive, so allow most of the day for travel, fuel and rest stops.</p>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">EXPLORE DAY 1 — VALLEYS & SUNSET</div>
+          <div class="daybody">
+            <ul>
+              <li>Visit Göreme Open-Air Museum.</li>
+              <li>Explore Paşabağ (Monk’s Valley) and its fairy chimneys.</li>
+              <li>Walk around Çavuşin Village.</li>
+              <li>Watch sunset at Red Valley.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">EXPLORE DAY 2 — BALLOONS & HISTORY 🎈</div>
+          <div class="daybody">
+            <ul>
+              <li>Take a sunrise hot-air balloon ride, weather permitting.</li>
+              <li>Or watch the
+                balloons from a scenic viewpoint.</li>
+              <li>Visit Uçhisar Castle for panoramic views.</li>
+              <li>Explore Kaymaklı or Derinkuyu Underground City.</li>
+              <li>If time allows, walk a section of Ihlara Valley.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">EXPLORE DAY 3 — POTTERY & LANDSCAPES</div>
+          <div class="daybody">
+            <ul>
+              <li>Visit Love Valley and Devrent Valley.</li>
+              <li>Explore Zelve Open-Air Museum.</li>
+              <li>Head to Avanos for a pottery workshop.</li>
+              <li>Enjoy Göreme’s cafés, shops and scenic views.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="callout"><strong>🎈 Don’t miss</strong>Watching the balloons rise over Cappadocia at
+        sunrise. Balloon flights depend on weather and official permissions, so a backup morning is useful.</div>
+    </section>
+    <section class="panel" id="antalya">
+      <h2>🌊 Antalya</h2>
+      <p class="intro">One full day for a waterfall, Mediterranean views and a little time to unwind before the next
+        drive.</p>
+      <div class="grid">
+        <article class="day">
+          <div class="dayhead">DÜDEN WATERFALLS 💦</div>
+          <div class="daybody">
+            <ul>
+              <li>Travel from Cappadocia to Antalya.</li>
+              <li>Visit Düden Waterfalls and enjoy the natural scenery.</li>
+              <li>Take time for photographs and a relaxed walk.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">KONYAALTI BEACH 🩵</div>
+          <div class="daybody">
+            <ul>
+              <li>Head to Konyaaltı Beach for Mediterranean views.</li>
+              <li>Walk along the coast and spend some time by the water.</li>
+              <li>Enjoy dinner locally and rest before continuing to Ölüdeniz.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="callout"><strong>💡 Planning note</strong>The drive from Cappadocia is long. Keep plans flexible if
+        you arrive late, rather than squeezing every activity into one evening.</div>
+    </section>
+    <section class="panel" id="oludeniz">
+      <h2>🏖️ Fethiye & Ölüdeniz</h2>
+      <p class="intro">Turquoise water, dramatic mountains, paragliders and a
+        boat day with a party atmosphere.</p>
+      <div class="grid">
+        <article class="day">
+          <div class="dayhead">DAY 1 — ANTALYA → ÖLÜDENIZ</div>
+          <div class="daybody">
+            <ul>
+              <li>Drive towards Fethiye and Ölüdeniz.</li>
+              <li>Visit Ölüdeniz Beach and admire the turquoise water.</li>
+              <li>Relax at Belcekız Beach or visit the Blue Lagoon if time and access allow.</li>
+              <li>Watch paragliders land near the beach.</li>
+              <li>Enjoy a relaxed evening by the coast.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">DAY 2 — BOAT TRIP & COASTAL STOPS 🚤</div>
+          <div class="daybody">
+            <ul>
+              <li>Board a boat excursion departing from the Ölüdeniz area.</li>
+              <li>Enjoy music, swimming and scenic coastal stops.</ li>
+              <li>Visit bays and swimming spots according to the boat’s route.</li>
+              <li>Return to shore after a full day on the Mediterranean.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="feature">
+        <div class="pill-label">TRIP HIGHLIGHT</div>
+        <div class="eyebrow">Ölüdeniz boat experience</div>
+        <h3>🎉 Foam Party on the Water</h3>
+        <p>Some boat excursions combine coastal swimming stops with a DJ and a foam party on deck. Dance, cool off in
+          the sea and enjoy a lively day out.</p>
+        <ul>
+          <li>Confirm your chosen boat trip includes a foam party; not every excursion offers one.</li>
+          <li>Check
+            departure point, duration, inclusions and return time before booking.</li>
+          <li>Bring swimwear, sunscreen, a towel and a waterproof phone pouch.</li>
+        </ul>
+      </div>
+      <div class="callout"><strong>✨ If you have extra time</strong>Explore Fethiye’s marina and old town, spend another
+        day at Ölüdeniz Beach, or consider tandem paragliding with a licensed operator.</div>
+    </section>
+    <section class="panel" id="istanbul">
+      <h2>🚋 Istanbul · Final 3 Days</h2>
+      <p class="intro">Return via Dalaman, fly back to Istanbul, drop off the rental car according to your booking and
+        explore the city using trams, metro and ferries.</p>
+      <div class="grid">
+        <article class="day">
+          <div class="dayhead">DAY 1 — SULTANAHMET & HISTORY 🕌</div>
+          <div class="daybody">
+            <ul>
+              <li>Explore Sultanahmet Square.</li>
+              <li>Visit the Blue Mosque and Hagia Sophia.</li>
+              <li>Discover the Basilica Cistern.</li>
+              <li>Visit Topkapi Palace if time and opening hours permit.</li>
+              <li>Finish with Turkish food or dinner overlooking the Bosphorus.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">DAY 2 — BALAT & GALATA TOWER 📸</div>
+          <div class="daybody">
+            <ul>
+              <li><b>Start early:</b> Explore Balat’s colourful streets and historic houses.</li>
+              <li>Photograph the distinctive façades and neighbourhood lanes.</ li>
+              <li>Head to Galata Tower and explore its surrounding streets.</li>
+              <li>Walk along Istiklal Street and explore Taksim Square.</li>
+              <li>If time permits, visit Dolmabahçe Palace.</li>
+              <li>Enjoy an evening around the Bosphorus.</li>
+            </ul>
+            <div class="callout"><strong>📸 Photography tip</strong>Balat and the Galata Tower area can get crowded
+              later in the morning and during the day. Arrive early for quieter streets and cleaner photo frames.</div>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">DAY 3 — MARKETS & LOCAL LIFE 🛍️</div>
+          <div class="daybody">
+            <ul>
+              <li>Explore the Grand Bazaar.</li>
+              <li>Visit the Spice Bazaar.</li>
+              <li>Discover local cafés and neighbourhood streets.</li>
+              <li>Use
+                trams, metro and ferries to get around like a local.</li>
+              <li>Shop for souvenirs and enjoy a final Turkish meal before heading home.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="day">
+          <div class="dayhead">GETTING AROUND 🚋</div>
+          <div class="daybody">
+            <ul>
+              <li>Use public transport for central Istanbul sightseeing.</li>
+              <li>Plan routes around attraction opening times and your hotel location.</li>
+              <li>Leave buffer time for airport transfers and traffic.</li>
+            </ul>
+            <p class="small">A rental car is usually less convenient than public transport in busy central areas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="panel" id="tips">
+      <h2>🧳 Before You Go — Quick
+        Tips</h2>
+      <div class="tips">
+        <div class="tip"><strong>🎈 Balloon plans</strong>Book in advance, but remember flights depend on weather and
+          official permissions.</div>
+        <div class="tip"><strong>🚗 Road-trip timing</strong>Check drive times, fuel stops, one-way rental rules and the
+          exact drop-off location.</div>
+        <div class="tip"><strong>🌊 Boat-day essentials</strong>Pack swimwear, sunscreen, a towel and waterproof
+          protection for your phone.</div>
+        <div class="tip"><strong>🎉 Foam-party booking</strong>Confirm the party is included in your chosen Ölüdeniz
+          boat excursion before paying.</div>
+        <div class="tip"><strong>📸 Best
+            photo windows</strong>Visit Balat and Galata Tower early for fewer people in your pictures.</div>
+        <div class="tip"><strong>🚋 Istanbul transport</strong>Use trams, metro and ferries to explore the city centre
+          more easily.</div>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>🗺️ The Route at a Glance</h2>
+      <p><b>Istanbul → Cappadocia → Antalya → Fethiye & Ölüdeniz → Istanbul</b></p>
+      <ul>
+        <li><b>Istanbul:</b> Arrival, jet-lag recovery and Istiklal Street.</li>
+        <li><b>Cappadocia:</b> Balloons, fairy chimneys, valleys and cave-hotel vibes.</li>
+        <li><b>Antalya:</b> Düden Waterfalls and Konyaaltı Beach.</li>
+        <li><b>Fethiye & Ölüdeniz:</b>
+          Turquoise beaches, boat trip and foam-party fun.</li>
+        <li><b>Istanbul:</b> Three days of history, photography, markets and public transport.</li>
+      </ul>
+      <p class="small">Transport idea: rent a car for the road-trip portion, then travel from the Fethiye area to
+        Dalaman Airport and fly to Istanbul. Compare alternatives and check one-way rental fees before finalising plans.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="eyebrow">Your next adventure</div>
+      <h2>Türkiye, save-worthy from start to finish. ✨</h2>
+      <p>Save this itinerary, share it with your travel partner and plan your own Turkish escape.</p>
+      <p style="margin-top:14px;font-size:.8rem
+;opacity:.85">Travel guide by Prinsiago · Timings and availability may vary by season, weather and opening hours.</p>
     </div>
-    <div class="callout"><strong>💡 Planning note</strong>The drive from Cappadocia is long. Keep plans flexible if you arrive late, rather than squeezing every activity into one evening.</div>
-  </section>
-  <section class="panel" id="oludeniz">
-    <h2>🏖️ Fethiye & Ölüdeniz</h2>
-    <p class="intro">Turquoise water, dramatic mountains, paragliders and a 
-boat day with a party atmosphere.</p>
-    <div class="grid">
-      <article class="day"><div class="dayhead">DAY 1 — ANTALYA → ÖLÜDENIZ</div><div class="daybody"><ul><li>Drive towards Fethiye and Ölüdeniz.</li><li>Visit Ölüdeniz Beach and admire the turquoise water.</li><li>Relax at Belcekız Beach or visit the Blue Lagoon if time and access allow.</li><li>Watch paragliders land near the beach.</li><li>Enjoy a relaxed evening by the coast.</li></ul></div></article>
-      <article class="day"><div class="dayhead">DAY 2 — BOAT TRIP & COASTAL STOPS 🚤</div><div class="daybody"><ul><li>Board a boat excursion departing from the Ölüdeniz area.</li><li>Enjoy music, swimming and scenic coastal stops.</
-li><li>Visit bays and swimming spots according to the boat’s route.</li><li>Return to shore after a full day on the Mediterranean.</li></ul></div></article>
-    </div>
-    <div class="feature">
-      <div class="pill-label">TRIP HIGHLIGHT</div>
-      <div class="eyebrow">Ölüdeniz boat experience</div>
-      <h3>🎉 Foam Party on the Water</h3>
-      <p>Some boat excursions combine coastal swimming stops with a DJ and a foam party on deck. Dance, cool off in the sea and enjoy a lively day out.</p>
-      <ul><li>Confirm your chosen boat trip includes a foam party; not every excursion offers one.</li><li>Check 
-departure point, duration, inclusions and return time before booking.</li><li>Bring swimwear, sunscreen, a towel and a waterproof phone pouch.</li></ul>
-    </div>
-    <div class="callout"><strong>✨ If you have extra time</strong>Explore Fethiye’s marina and old town, spend another day at Ölüdeniz Beach, or consider tandem paragliding with a licensed operator.</div>
-  </section>
-  <section class="panel" id="istanbul">
-    <h2>🚋 Istanbul · Final 3 Days</h2>
-    <p class="intro">Return via Dalaman, fly back to Istanbul, drop off the rental car according to your booking and explore the city using trams, metro and ferries.</p>
-    <div class="grid">
-      <article class="day"><div class="dayhead">DAY 1 — SULTANAHMET & HISTORY 🕌</div><div class="daybody"><ul><li>Explore Sultanahmet Square.</li><li>Visit the Blue Mosque and Hagia Sophia.</li><li>Discover the Basilica Cistern.</li><li>Visit Topkapi Palace if time and opening hours permit.</li><li>Finish with Turkish food or dinner overlooking the Bosphorus.</li></ul></div></article>
-      <article class="day"><div class="dayhead">DAY 2 — BALAT & GALATA TOWER 📸</div><div class="daybody"><ul><li><b>Start early:</b> Explore Balat’s colourful streets and historic houses.</li><li>Photograph the distinctive façades and neighbourhood lanes.</
-li><li>Head to Galata Tower and explore its surrounding streets.</li><li>Walk along Istiklal Street and explore Taksim Square.</li><li>If time permits, visit Dolmabahçe Palace.</li><li>Enjoy an evening around the Bosphorus.</li></ul><div class="callout"><strong>📸 Photography tip</strong>Balat and the Galata Tower area can get crowded later in the morning and during the day. Arrive early for quieter streets and cleaner photo frames.</div></div></article>
-      <article class="day"><div class="dayhead">DAY 3 — MARKETS & LOCAL LIFE 🛍️</div><div class="daybody"><ul><li>Explore the Grand Bazaar.</li><li>Visit the Spice Bazaar.</li><li>Discover local cafés and neighbourhood streets.</li><li>Use 
-trams, metro and ferries to get around like a local.</li><li>Shop for souvenirs and enjoy a final Turkish meal before heading home.</li></ul></div></article>
-      <article class="day"><div class="dayhead">GETTING AROUND 🚋</div><div class="daybody"><ul><li>Use public transport for central Istanbul sightseeing.</li><li>Plan routes around attraction opening times and your hotel location.</li><li>Leave buffer time for airport transfers and traffic.</li></ul><p class="small">A rental car is usually less convenient than public transport in busy central areas.</p></div></article>
-    </div>
-  </section>
-  <section class="panel" id="tips">
-    <h2>🧳 Before You Go — Quick 
-Tips</h2>
-    <div class="tips">
-      <div class="tip"><strong>🎈 Balloon plans</strong>Book in advance, but remember flights depend on weather and official permissions.</div>
-      <div class="tip"><strong>🚗 Road-trip timing</strong>Check drive times, fuel stops, one-way rental rules and the exact drop-off location.</div>
-      <div class="tip"><strong>🌊 Boat-day essentials</strong>Pack swimwear, sunscreen, a towel and waterproof protection for your phone.</div>
-      <div class="tip"><strong>🎉 Foam-party booking</strong>Confirm the party is included in your chosen Ölüdeniz boat excursion before paying.</div>
-      <div class="tip"><strong>📸 Best 
-photo windows</strong>Visit Balat and Galata Tower early for fewer people in your pictures.</div>
-      <div class="tip"><strong>🚋 Istanbul transport</strong>Use trams, metro and ferries to explore the city centre more easily.</div>
-    </div>
-  </section>
-  <section class="panel">
-    <h2>🗺️ The Route at a Glance</h2>
-    <p><b>Istanbul → Cappadocia → Antalya → Fethiye & Ölüdeniz → Istanbul</b></p>
-    <ul><li><b>Istanbul:</b> Arrival, jet-lag recovery and Istiklal Street.</li><li><b>Cappadocia:</b> Balloons, fairy chimneys, valleys and cave-hotel vibes.</li><li><b>Antalya:</b> Düden Waterfalls and Konyaaltı Beach.</li><li><b>Fethiye & Ölüdeniz:</b> 
-Turquoise beaches, boat trip and foam-party fun.</li><li><b>Istanbul:</b> Three days of history, photography, markets and public transport.</li></ul>
-    <p class="small">Transport idea: rent a car for the road-trip portion, then travel from the Fethiye area to Dalaman Airport and fly to Istanbul. Compare alternatives and check one-way rental fees before finalising plans.</p>
-  </section>
-</main>
-<footer><div class="wrap"><div class="eyebrow">Your next adventure</div><h2>Türkiye, save-worthy from start to finish. ✨</h2><p>Save this itinerary, share it with your travel partner and plan your own Turkish escape.</p><p style="margin-top:14px;font-size:.8rem
-;opacity:.85">Travel guide by Prinsiago · Timings and availability may vary by season, weather and opening hours.</p></div></footer>
+  </footer>
 </body>
+
 </html>
